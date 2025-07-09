@@ -1,13 +1,12 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 using namespace std;
 
 class Employee {
 public:
-    int id;
+    string id;
     string name;
-    float salary;
+    string salary;
 
     void input() {
         cout << "Enter ID: ";
@@ -57,9 +56,11 @@ void viewEmployees() {
         size_t pos1 = line.find(',');
         size_t pos2 = line.find_last_of(',');
 
-        emp.id = stoi(line.substr(0, pos1));
+
+
+        emp.id = line.substr(0, pos1);
         emp.name = line.substr(pos1 + 1, pos2 - pos1 - 1);
-        emp.salary = stof(line.substr(pos2 + 1));
+        emp.salary = line.substr(pos2 + 1);
         emp.display();
     }
 
@@ -68,7 +69,7 @@ void viewEmployees() {
 
 // Function to search employee by ID
 void searchEmployee() {
-    int searchId;
+    string searchId;
     cout << "Enter ID to search: ";
     cin >> searchId;
 
@@ -79,9 +80,9 @@ void searchEmployee() {
         size_t pos1 = line.find(',');
         size_t pos2 = line.find_last_of(',');
 
-        int id = stoi(line.substr(0, pos1));
+        string id = line.substr(0, pos1);
         string name = line.substr(pos1 + 1, pos2 - pos1 - 1);
-        float salary = stof(line.substr(pos2 + 1));
+        string salary = line.substr(pos2 + 1);
 
         if (id == searchId) {
             cout << "Employee found: ID: " << id << ", Name: " << name << ", Salary: " << salary << endl;
@@ -96,7 +97,7 @@ void searchEmployee() {
 
 // Function to delete employee by ID
 void deleteEmployee() {
-    int delId;
+    string delId;
     cout << "Enter ID to delete: ";
     cin >> delId;
 
@@ -108,7 +109,7 @@ void deleteEmployee() {
 
     while (getline(inFile, line)) {
         size_t pos1 = line.find(',');
-        int id = stoi(line.substr(0, pos1));
+        string id = line.substr(0, pos1);
 
         if (id != delId) {
             tempFile << line << endl;
@@ -142,6 +143,8 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
+        cout << choice;
+
         switch (choice) {
         case 1: addEmployee(); break;
         case 2: viewEmployees(); break;
@@ -150,6 +153,7 @@ int main() {
         case 5: cout << "Exiting program...\n"; break;
         default: cout << "Invalid choice!\n"; break;
         }
+        choice = 0;
     } while (choice != 5);
 
     return 0;
