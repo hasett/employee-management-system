@@ -13,6 +13,7 @@ Key Features
 
 
 How It Works
+
 The Employee Management System runs in the command line and uses text file storage to keep employee data between program runs. Here’s a step‑by‑step overview of how the program works:
 1 Starting the ProgramWhen you run the program, it shows a simple menu with five options:
 ·	Add Employee
@@ -47,3 +48,16 @@ References
 ·	Learn C++ File Handling – YouTube
 ·	C++ File I/O – W3Schools
 ·	GeeksforGeeks: File Handling in C++(https://www.geeksforgeeks.org/file-handling-c-classes/)
+
+
+      
+    Group Members 			      		ID
+1.	Amira Mehdi  …………………….…....... RCD/0894/2017
+2.	Ananya Alemayehu ............. RCD/0895/2017
+3.	Edom Tsegaye…………………….….....……. RCD/0906/2017
+4.	Hasset Tefera ……………………………..... RCD/0915/2017
+5.	Hermela  Melaku ………………………..... RCD/0918/2017
+6.	Hiwot Adane …………………………..…......RCD/0920/2017
+7.	Ikram nesro ……………………………….......RCD/1648/2017
+
+
